@@ -1,0 +1,20 @@
+{
+  "name": "ng-questionnaire-e2e",
+  "version": "1.0.0",
+  "description": "Playwright + TypeScript E2E framework for the ng-questionnaire Angular app",
+  "scripts": {
+    "test": "playwright test --grep-invert @recon",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:a11y": "playwright test tests/a11y",
+    "recon": "playwright test --grep @recon --project=chromium",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.3",
+    "typescript": "^7.0.2"
+  },
+  "private": true
+}
